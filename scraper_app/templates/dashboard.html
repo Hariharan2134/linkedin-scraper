@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{% static 'scraper_app/style.css' %}">
+</head>
+<body>
+<div class="page-container">
+<div class="dashboard">
+
+    <h2>LinkedIn Scraper</h2>
+
+    <form method="POST" action="/run/">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <button type="submit">Start Scraping</button>
+    </form>
+
+</div>
+
+<div class="footer">© 2025 LinkedIn Scraper Tool</div>
+</div>
+</body>
+</html>

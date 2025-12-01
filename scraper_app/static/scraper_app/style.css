@@ -1,0 +1,269 @@
+/* ============================================================
+   GLOBAL PAGE LAYOUT (For ALL Pages)
+============================================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #eef1f6;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    color: #333;
+}
+
+/* Default container used in login + dashboard */
+.page-container {
+    width: 90%;
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.08);
+}
+
+.page-container h2 {
+    font-size: 28px;
+    text-align: center;
+    color: #2C3E50;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+}
+
+/* ============================================================
+   FORM ELEMENTS
+============================================================ */
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 12px;
+    background: #fafafa;
+    border: 1px solid #d5d8df;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    margin-bottom: 22px;
+    transition: .2s;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #ff7a21;
+    background: #fff;
+}
+
+/* Orange button */
+button {
+    width: 100%;
+    padding: 14px;
+    background: #ff7a21;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: .25s;
+}
+
+button:hover {
+    background: #e36405;
+}
+
+/* Error message in login page */
+.error {
+    background: #ffecec;
+    border-left: 5px solid #d93025;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* ============================================================
+   DASHBOARD TABLE DESIGN
+============================================================ */
+
+.table-container {
+    margin-top: 25px;
+    overflow-x: auto;
+}
+
+.scrape-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.scrape-table th {
+    background: #eef5ff;
+    padding: 12px;
+    border-bottom: 2px solid #d7dce5;
+    text-align: left;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.scrape-table td {
+    padding: 12px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.scrape-table tr:hover {
+    background: #f8faff;
+}
+
+.scrape-table a {
+    color: #0078ff;
+    text-decoration: none;
+}
+
+.scrape-table a:hover {
+    text-decoration: underline;
+}
+
+/* ============================================================
+   EXPORT BUTTONS
+============================================================ */
+
+.button-row {
+    margin-top: 25px;
+    display: flex;
+    gap: 14px;
+}
+
+.export-green {
+    background: #1ebe59;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    flex: 1;
+    text-align: center;
+    border: none;
+}
+
+.export-green:hover {
+    background: #10963f;
+}
+
+.export-blue {
+    background: #1976d2;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    flex: 1;
+    text-align: center;
+    border: none;
+}
+
+.export-blue:hover {
+    background: #0a57a0;
+}
+
+/* ============================================================
+   RESULT PAGE — Fully Centered, Perfect Terminal Card
+============================================================ */
+
+.result-flex {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 16px;
+    background: #eef1f6;
+}
+
+.result-card {
+    width: 100%;
+    max-width: 900px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.result-card h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+/* Terminal output */
+.terminal-box {
+    background: #111111;
+    color: #00ff7b;
+    padding: 25px;
+    border-radius: 14px;
+    font-family: Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    max-height: 500px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    border: 1px solid #222;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.35);
+    margin-bottom: 25px;
+}
+
+.terminal-box pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Back link */
+.back {
+    color: #1976d2;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.back:hover {
+    color: #ff7a21;
+    text-decoration: underline;
+    transform: translateX(-2px);
+}
+
+/* ============================================================
+   RESPONSIVE FIXES
+============================================================ */
+
+@media (max-width: 600px) {
+    .result-card {
+        padding: 24px 18px;
+    }
+
+    .result-card h2 {
+        font-size: 24px;
+    }
+
+    .terminal-box {
+        font-size: 13px;
+    }
+}

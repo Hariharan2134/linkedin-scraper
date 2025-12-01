@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scraper Output</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #eef1f6;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            color: #333;
+        }
+
+        /* Center layout */
+        .result-flex {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 16px;
+        }
+
+        /* White card */
+        .result-card {
+            width: 100%;
+            max-width: 900px;
+            background: #ffffff;
+            padding: 40px 36px;
+            border-radius: 20px;
+            box-shadow: 0px 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .result-card h2 {
+            text-align: center;
+            font-size: 30px;
+            margin-bottom: 25px;
+            color: #2c3e50;
+            font-weight: 700;
+        }
+
+        /* Terminal output box */
+        .terminal-box {
+            background: #111;
+            color: #00ff7b;
+            padding: 25px;
+            border-radius: 14px;
+            font-family: Consolas, monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            max-height: 500px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            border: 1px solid #222;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+            margin-bottom: 25px;
+        }
+
+        .terminal-box pre {
+            margin: 0;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Back to Dashboard link */
+        .back {
+            display: inline-block;
+            color: #1976d2;
+            font-size: 16px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: .2s;
+        }
+
+        .back:hover {
+            color: #ff7a21;
+            text-decoration: underline;
+            transform: translateX(-2px);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            .result-card {
+                padding: 28px 20px;
+            }
+            .terminal-box {
+                font-size: 13px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+<div class="result-flex">
+    <div class="result-card">
+
+        <h2>Scraper Output</h2>
+
+        <div class="terminal-box">
+            <pre>{{ output }}</pre>
+        </div>
+
+        <a href="/dashboard/" class="back">← Back to Dashboard</a>
+
+    </div>
+</div>
+
+</body>
+</html>
