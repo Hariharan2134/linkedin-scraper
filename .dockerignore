@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+*.json
+db.sqlite3
+.vscode/
+staticfiles/
